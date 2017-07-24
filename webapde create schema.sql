@@ -26,16 +26,13 @@ DROP TABLE IF EXISTS `photo`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `photo` (
   `photo_id` int(11) NOT NULL AUTO_INCREMENT,
-  `photo_uploader` varchar(20) NOT NULL,
-  `photo_uploadDate` date NOT NULL,
-  `photo_url` longtext NOT NULL,
-  `photo_privacy` enum('private','public') NOT NULL,
   `photo_title` varchar(45) NOT NULL,
   `photo_description` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`photo_id`),
-  KEY `photo_uploader_idx` (`photo_uploader`),
-  CONSTRAINT `photo_uploader` FOREIGN KEY (`photo_uploader`) REFERENCES `user` (`user_username`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `photo_uploadDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `photo_url` tinytext NOT NULL,
+  `photo_privacy` enum('private','public') NOT NULL,
+  PRIMARY KEY (`photo_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,6 +41,7 @@ CREATE TABLE `photo` (
 
 LOCK TABLES `photo` WRITE;
 /*!40000 ALTER TABLE `photo` DISABLE KEYS */;
+INSERT INTO `photo` VALUES (1,'Claude\'s Photo','Claude\'s first upload!','2017-07-23 13:13:34','C:\\Users\\Admin\\Desktop','public'),(2,'Jess\' Photo','Jess\' first photo!','2017-07-23 13:15:30','C:\\Users\\Pictures','private'),(3,'Alex\'s Photo','Alex\'s first photo!','2017-07-23 13:16:07','C:\\Users\\Downloads','private');
 /*!40000 ALTER TABLE `photo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +58,7 @@ CREATE TABLE `photo_user_relation` (
   PRIMARY KEY (`photo_uploader`,`photos_id`),
   KEY `photos_id_idx` (`photos_id`),
   CONSTRAINT `photos_id` FOREIGN KEY (`photos_id`) REFERENCES `photo` (`photo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `photos_uploader` FOREIGN KEY (`photo_uploader`) REFERENCES `user` (`user_username`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `photos_uploader` FOREIGN KEY (`photo_uploader`) REFERENCES `users` (`users_username`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -70,6 +68,7 @@ CREATE TABLE `photo_user_relation` (
 
 LOCK TABLES `photo_user_relation` WRITE;
 /*!40000 ALTER TABLE `photo_user_relation` DISABLE KEYS */;
+INSERT INTO `photo_user_relation` VALUES ('Claude',1),('Jess',2),('Alex',3);
 /*!40000 ALTER TABLE `photo_user_relation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +86,7 @@ CREATE TABLE `shared_photos` (
   KEY `user_username_idx` (`shared_user_username`),
   KEY `shared_photo_username_idx` (`shared_user_username`),
   CONSTRAINT `shared_photo_id` FOREIGN KEY (`photo_id`) REFERENCES `photo` (`photo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `shared_photo_username` FOREIGN KEY (`shared_user_username`) REFERENCES `user` (`user_username`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `shared_photo_username` FOREIGN KEY (`shared_user_username`) REFERENCES `users` (`users_username`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -97,6 +96,7 @@ CREATE TABLE `shared_photos` (
 
 LOCK TABLES `shared_photos` WRITE;
 /*!40000 ALTER TABLE `shared_photos` DISABLE KEYS */;
+INSERT INTO `shared_photos` VALUES (2,'Alex'),(2,'Claude'),(3,'Claude');
 /*!40000 ALTER TABLE `shared_photos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,6 +120,7 @@ CREATE TABLE `tag` (
 
 LOCK TABLES `tag` WRITE;
 /*!40000 ALTER TABLE `tag` DISABLE KEYS */;
+INSERT INTO `tag` VALUES (1,'outdoors'),(2,'games'),(3,'family'),(4,'school');
 /*!40000 ALTER TABLE `tag` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,31 +147,33 @@ CREATE TABLE `tag_photo_relation` (
 
 LOCK TABLES `tag_photo_relation` WRITE;
 /*!40000 ALTER TABLE `tag_photo_relation` DISABLE KEYS */;
+INSERT INTO `tag_photo_relation` VALUES (1,1),(2,1),(1,2),(2,2),(3,2),(4,2),(1,3);
 /*!40000 ALTER TABLE `tag_photo_relation` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `user`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user` (
-  `user_username` varchar(20) NOT NULL,
-  `user_password` varchar(30) NOT NULL,
-  `user_shortdescription` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`user_username`)
+CREATE TABLE `users` (
+  `users_username` varchar(20) NOT NULL,
+  `users_password` varchar(30) NOT NULL,
+  `users_shortdescription` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`users_username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `users`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES ('Alex','password','i\'m the second user'),('Claude','password','i\'m the first user'),('Jess','password','i\'m the third user');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -182,4 +185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-07-21 22:47:30
+-- Dump completed on 2017-07-24 20:53:15
