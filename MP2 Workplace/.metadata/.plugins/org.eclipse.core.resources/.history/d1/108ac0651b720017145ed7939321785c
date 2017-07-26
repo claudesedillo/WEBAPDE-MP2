@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>OOPS! You are not allowed to view/access this content.</h1>
+	<span>Please <a href="login.jsp">login</a>a to proceed.
+	</span>
+	<br>
+	<span>Don't have an account? Sign up <a href="signup.jsp">here!</a></span>
+</body>
+</html>

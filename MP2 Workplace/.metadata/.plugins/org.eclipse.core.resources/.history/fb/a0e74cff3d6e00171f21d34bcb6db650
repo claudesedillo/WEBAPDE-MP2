@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>SIGN-UP!!</h1>
+	
+	<form method="POST" action="register">
+		Username: 
+		Password:
+		Description(Optional):
+	</form>
+</body>
+</html>

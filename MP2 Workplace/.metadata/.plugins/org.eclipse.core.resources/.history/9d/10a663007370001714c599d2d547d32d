@@ -1,0 +1,11 @@
+package service;
+
+public class Decoder {
+	//o = name
+	private String[] parts;
+	
+	public void decode(String theSentence) {
+		
+		parts = theSentence.split("|");
+	}
+}

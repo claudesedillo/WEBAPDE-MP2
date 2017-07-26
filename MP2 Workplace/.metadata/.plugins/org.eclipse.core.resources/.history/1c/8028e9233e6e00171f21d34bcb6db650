@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>SIGN-UP!!</h1>
+	
+	<form method="POST" action="register">
+		Username: <input type="text" name="username">
+		Password: <input type="password" name="password">
+		Confirm Password: <input type="password" name="conPassword">
+		Description(Optional): <input type="text"> </br>
+	</form>
+</body>
+</html>

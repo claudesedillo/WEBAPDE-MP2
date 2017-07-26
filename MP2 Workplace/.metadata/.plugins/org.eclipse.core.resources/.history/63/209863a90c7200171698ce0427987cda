@@ -1,0 +1,109 @@
+package filter;
+
+import java.io.IOException;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet Filter implementation class Authentication
+ */
+@WebFilter(urlPatterns= {"/login.html", 
+		 				 "/signup.html",
+		 				 "/Access-Denied.html",
+		 				 "/homepage.jsp",
+		 				 "/success.jsp"})
+
+public class Authentication implements Filter {
+	
+	private HttpServletRequest req;
+	private HttpServletResponse rep;
+	private String url;
+    /**
+     * Default constructor. 
+     */
+    public Authentication() {}
+
+	/**
+	 * @see Filter#destroy()
+	 */
+	public void destroy() {}
+
+	/**
+	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	 */
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		req = (HttpServletRequest) request;
+		rep = (HttpServletResponse) response;
+		
+		url = req.getServletPath();
+		System.out.println("Inside filter: " + url);
+		
+		switch(url) {
+			case "/login.html":
+			case "/signup.html":
+			case "/Access-Denied.html": authenticateRedirect(request, response, chain);
+					                   break;
+			case "/homepage.jsp":
+			case "/success.jsp": securityRedirect(request, response, chain);
+					           break;
+		}
+		
+
+			
+	}
+	
+	//When one of the links are entered, it user is logged in, it will redirect directly to homepage.
+	//If not logged in, it will redirect to their respective pages.
+	private void authenticateRedirect(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		// TODO Auto-generated method stub
+		
+		//Check if a session exist.
+		if(req.getSession().getAttribute("un") != null) {
+			System.out.println("User logged in. Redirecting to homepage.jsp");
+			rep.sendRedirect("homepage.jsp");
+		}
+		
+		//If not, redirect to respective pages.
+		else {
+			System.out.println("No user logged in redirecting to: ");
+			
+			if(!url.equals("Access-Denied.html"))
+				chain.doFilter(request, response);
+			else {
+				req.getRequestDispatcher("login.html").forward(request, response);
+			}
+		}
+		
+	}
+
+	//When one of the links are entered, if user is logged out, it will redirect to Access-Denied.html
+	//If logged in, then proceeds to the pages.
+	private void securityRedirect(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		// TODO Auto-generated method stub
+		
+		//Check if a session exist.
+		if(req.getSession().getAttribute("un") != null) {
+			System.out.println("Filter was called. (User is logged in");
+			chain.doFilter(request, response);
+		}
+		
+		//If not, redirect to access denied.
+		else {
+			System.out.println("No user logged in. Redirecting to Access-denied page.");
+			rep.sendRedirect("Access-Denied.html");
+		}
+	}
+
+	/**
+	 * @see Filter#init(FilterConfig)
+	 */
+	public void init(FilterConfig fConfig) throws ServletException {}
+
+}

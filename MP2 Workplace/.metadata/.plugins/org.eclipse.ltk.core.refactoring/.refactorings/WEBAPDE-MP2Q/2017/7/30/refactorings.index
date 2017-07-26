@@ -1,0 +1,21 @@
+1500901764491	Rename type 'loginServlet'
+1500901777406	Rename type 'welcomeServlet'
+1500902669722	Rename type 'Decoder'
+1501071007011	Delete element
+1501072061375	Move 'error.html' to 'WebContent'
+1501072115968	Rename resource 'error.html'
+1501074983990	Delete element
+1501078764724	Delete element
+1501078935217	Delete element
+1501079018797	Rename type 'LoginServlet'
+1501080721664	Delete element
+1501080737577	Delete element
+1501081134602	Move 'alreadyLogged.jsp' to 'WebContent'
+1501082797555	Delete element
+1501082860643	Delete element
+1501083418144	Delete element
+1501083422063	Delete element
+1501083444948	Move 'homepage.jsp' to 'WebContent'
+1501083446830	Move 'mainfeed.jsp' to 'WebContent'
+1501084386732	Delete element
+1501084390745	Delete element

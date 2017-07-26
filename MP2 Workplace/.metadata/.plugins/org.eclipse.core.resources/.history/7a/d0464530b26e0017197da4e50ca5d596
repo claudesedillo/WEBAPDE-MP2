@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>LOGIN!!!!</h1>
+	<!-- Login (testing), replace this with the real login.html -->
+	<form action="login" method="POST">
+		Username: <input type="text" name="username"></br>
+		Passowrd: <input type="password" name="password"></br>
+		<input type="checkbox" value="True" name="remember">
+		<input type="submit" value="Login">
+	</form>
+</body>
+</html>
