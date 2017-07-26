@@ -32,11 +32,13 @@
         <script>            
             function showLogin () {
                $("#logindiv").slideToggle();
+               $("#signupdiv").slideUp();
                 
             }
             
             function showSignUp () {
                 $("#signupdiv").slideToggle();
+                $("#logindiv").slideUp();
             }
         </script>
         
@@ -61,7 +63,9 @@
 	                <p id="passwordt">PASSWORD</p>
 	                <input type="password" id="password" name="password"><br>
 	                
-	                <!-- Add remember tag on this spot for cookies -->	                
+	                <!-- Add remember tag on this spot for cookies -->	   
+	                 <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+      <label for="filled-in-box">Remember moi</label>             
 	                <input type="submit" value="login"> <!-- This is the button, para ma send data to servlet -lex -->
                 </form>
             </div>
@@ -89,7 +93,7 @@
         <div id = "hfeed">
             <img src="img/Screen%20Shot%202017-07-23%20at%202.32.32%20PM.png" id="pic1">
             <img src="img/Screen%20Shot%202017-07-26%20at%2011.04.59%20PM.png" id="pic2">
-            <img src="/img/Screen%20Shot%202017-07-26%20at%2011.05.12%20PM.png" id="pic3">
+            <img src="img/Screen%20Shot%202017-07-26%20at%2011.05.12%20PM.png" id="pic3">
           
         </div>
     

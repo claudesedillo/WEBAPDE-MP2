@@ -26,11 +26,14 @@
         <script>            
             function showLogin () {
                $("#logindiv").slideToggle();
+               $("#signupdiv").slideUp();
                 
+ 
             }
             
             function showSignUp () {
                 $("#signupdiv").slideToggle();
+                $("#logindiv").slideUp();
             }
         </script>
         
@@ -44,9 +47,10 @@
                 
             <div id = "logindiv">
                 <form><p id="usernamet">USERNAME</p><input type="text" id="username"> <br> <p id="passwordt">PASSWORD</p><input type="password" id="password"></form>
+        
             </div>
                 
-            <div id="signupdiv">
+            <div id = "signupdiv">
                 <form> 
                     <p id="usernamet">NAME</p><input type="text" id="name"> <br> 
                     <p id="usernamet">USERNAME</p><input type="text" id="username"> 

@@ -8,10 +8,9 @@
     right: 0px;   
 }
 
-
 .rightpane #loginb, #signupb {
     transform: translate(55%, 110px);
-    background: black;
+    background: rgba(0,0,0, 0.6);
     position: relative;
     border: 1px solid snow;
     height: 5%;
@@ -82,26 +81,26 @@
 
  #logindiv {
     background-color: transparent;
-    height: 15%;
-    width: 70%;
+    height: 20%;
+    width: 65%;
     border-style: solid;
     border-color: snow;
     border-width: 0.5px;
     border-radius: 5px; 
     display: none;
-    transform: translate(25%, 105px);
+    transform: translate(30%, 105px);
 }
 
 #signupdiv {
     background-color: transparent;
-    height: 22%;
-    width: 70%;
+    height: 30%;
+    width: 65%;
     border-style: solid;
     border-color: snow;
     border-width: 0.5px;
     border-radius: 5px; 
     display: none;
-    transform: translate(25%, 105px);
+    transform: translate(30%, 105px);
 
 }
 
@@ -119,6 +118,17 @@
 
 }
 
+#test5 {
+    color: snow;
+    transform: translate(0%, 45px);
+}
+
+#terms {
+    color: snow;
+    font-family: Avenir Next;
+    font-size: 11px;
+    text-align: center;
+}
 
 #usernamet, #passwordt {
     color: snow;
