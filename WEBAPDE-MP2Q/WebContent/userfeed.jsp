@@ -5,8 +5,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+		<!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
+    	<title>Insert title here</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <!--Import materialize.css-->
+        <link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        
+        <link rel = "stylesheet" type="text/css" href="css/homepage.css">
+        
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
 <body>
+ 		<div id="header">
+              <a class="waves-effect waves-light btn" id="logoutb">Logout</a> <br>
+    
+        </div>
+      
+        <div id="feed">
+            <div id="picwrapper">
+                <img class="materialboxed" src="img/000018.JPG" width="500px" id="pic1"> <br>
+                <li class="divider"></li>    
+            </div>
+            
+            <div id="picwrapper">
+                <img class="materialboxed" src="img/00660003.jpg" width="500px" id="pic1"> <br>
+                <li class="divider"></li>    
+            </div>
+
+        </div>
 
 </body>
 </html>

@@ -13,14 +13,15 @@
         <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        
         <link rel = "stylesheet" type="text/css" href="css/homepage.css">
         
 
       <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>        
     </head>
     
     <body>
@@ -86,10 +87,9 @@
         </div>
         
         <div id = "hfeed">
-            <img src="img/Screen%20Shot%202017-07-23%20at%202.32.32%20PM.png" id="pic1">
-            <img src="img/Screen%20Shot%202017-07-26%20at%2011.04.59%20PM.png" id="pic2">
-            <img src="img/Screen%20Shot%202017-07-26%20at%2011.05.12%20PM.png" id="pic3">
-          
+            <img class="materialboxed" src="img/000018.JPG" width="280px" id="pic1">         
+            <img class="materialboxed" src="img/00660003.jpg" width="280px" id="pic2"> 
+            <img class="materialboxed" src="/img/Screen%20Shot%202017-07-26%20at%2011.05.12%20PM.png" width="280px" id="pic3">
         </div>
     
 
