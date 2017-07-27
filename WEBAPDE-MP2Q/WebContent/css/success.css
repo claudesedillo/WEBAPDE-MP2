@@ -1,0 +1,36 @@
+body {
+    background: linear-gradient(#780206, #061161);
+    background-attachment: fixed;
+}
+
+
+#welcome {
+    height: 20%;
+    width: 40%;
+    background-color: snow;
+    transform: translate(75%, 150px);
+    opacity: 0.9;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 5px 5px 2px #252525;
+}
+
+#proceedb {
+    transform: translate(0%, -30px);
+	background: rgba(0, 0, 0, 0.9);
+    position: relative;
+    height: 25%;
+    width: 40%;
+    font-size: 10px;
+    box-shadow: 1px 1px 1px #252525;
+    
+}
+
+#welcometag {
+    transform: translate(0%, 15px);
+    font-family: Avenir Next;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
