@@ -18,6 +18,7 @@
 
 body {
      background: linear-gradient(#780206, #061161);
+    background-attachment: fixed;
 }
 
 #header {
@@ -31,14 +32,16 @@ body {
 
 }
 
-#header #logoutb {
-   float: right;
-    margin-top: 5px;
-    margin-right: 5px;
+#header #dropmenu {
+    float: right;
+    height: 50px;
     background: rgba(0, 0, 0, 0.9);
     color: snow;
-    font-size: 12px;
-    border-radius: 7px;
+    font-family: Avenir Next Condensed;
+}
+
+#icon {
+    margin-top: 8px;
 }
 
 #feed {

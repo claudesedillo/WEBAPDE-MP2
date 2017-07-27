@@ -5,9 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
 		<!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
     	<title>Insert title here</title>
-        <!--Import Google Icon Font-->
+           <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         <!--Import materialize.css-->
@@ -15,20 +16,30 @@
         <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
-        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+         <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
         
-        <link rel = "stylesheet" type="text/css" href="css/homepage.css">
-        
+         <link rel = "stylesheet" type="text/css" href="css/userfeed.css">
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+        
+      
 </head>
 <body>
- 		<div id="header">
-              <a class="waves-effect waves-light btn" id="logoutb">Logout</a> <br>
+ 	  <div id="header">
+              <a class="dropdown-button btn" href='#' data-activates="menu" id="dropmenu"> <i class="material-icons" id="icon">menu</i></a>
+
+              <!-- menu contents -->
+              <ul id="menu" class='dropdown-content'>
+                <li><a href="#!"></a></li>
+                <li><a href="#!">home</a></li>
+                  <li><a href="#!">profile</a></li>
+                  <li><a href="#!">logout</a></li>
+                <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+              </ul>
+        
     
         </div>
       
