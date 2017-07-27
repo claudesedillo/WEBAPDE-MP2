@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+D:\AlexanderII\Desktop\Programming\WEBAPDE\MP2\MP2 Workplace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1681298736.index
-1743771912.index
-3288295052.index
-2058666503.index
-1466320762.index
-3535891137.index
-1931519181.index

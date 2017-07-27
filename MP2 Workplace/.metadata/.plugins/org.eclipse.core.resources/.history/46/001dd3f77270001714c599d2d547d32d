@@ -1,9 +1,0 @@
-package service;
-
-public class Decoder {
-	private String[] parts;
-	
-	public void decode(String theSentence) {
-		
-	}
-}

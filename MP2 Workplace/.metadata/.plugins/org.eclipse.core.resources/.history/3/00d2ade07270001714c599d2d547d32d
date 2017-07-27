@@ -1,6 +1,0 @@
-package service;
-
-public class Decoder {
-	private String sentence;
-	private String
-}
