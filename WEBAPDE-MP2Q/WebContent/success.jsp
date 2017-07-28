@@ -26,10 +26,10 @@
 
 </head>
 <body>
-	   <div id="welcome"><p id="welcometag">Welcome, admin!</p><br>
+	   < <div id="welcome"><p id="welcometag"><strong> Welcome,</strong> admin!</p><br>
             
        <a class="waves-effect waves-light btn" id="proceedb">Proceed</a> 
   
-        </div>
+       </div>
 </body>
 </html>
