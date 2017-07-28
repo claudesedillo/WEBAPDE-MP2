@@ -21,17 +21,15 @@
         
 
       <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>        
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>   
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>      
     </head>
     
     <body>
-    	
-        
-        <!--Import jQuery before materialize.js -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-        <script>            
-            function showLogin () {
+      <script> 
+             function showLogin () {
                $("#logindiv").slideToggle();
                $("#signupdiv").slideUp();
                 
@@ -41,6 +39,8 @@
                 $("#signupdiv").slideToggle();
                 $("#logindiv").slideUp();
             }
+        
+
         </script>
         
 
@@ -49,49 +49,48 @@
             <form><input type="text" id="searchbox"></form>
                 
             
-            <p id="title">IDK</p>
+            <p id="title">NYEAAAM</p>
                 
             <div id = "logindiv">
-                <form action="login" method="POST">
-                    <p id="usernamet">USERNAME</p>
-	                <input type="text" id="username" name="username"> <br> 
-	                
-	                <p id="passwordt">PASSWORD</p>
-	                <input type="password" id="password" name="password"><br>
-	                
-	                <!-- Add remember tag on this spot for cookies -->	   
-	                 <input type="checkbox" name="remember" class="filled-in" id="filled-in-box" checked="checked" />
-      <label for="filled-in-box">Remember moi</label>             
-	                <input type="submit" value="login"> <!-- This is the button, para ma send data to servlet -lex -->
-                </form>
+                <form><p id="usernamet">USERNAME</p><input type="text" id="username"> <br> <p id="passwordt">PASSWORD</p><input type="password" id="password"></form>
+                
+                <p id="rmwrapper">
+                    <input type="checkbox" id="rmcb" checked="checked" />
+                    <label for="rmcb">remember me</label>
+                </p>
+                
+                <i class="material-icons" id="check">check</i>
             </div>
                 
-                
             <div id="signupdiv">
-                <form method="POST" action="register"> 
-                	<!-- If any tags will share the same id, just use a class. ID's are supposed to be unique and it may cause some problems in the future -lex -->
-                    <p id="usernamet">NAME</p><input type="text" id="name" name="name"> <br> 
-                    <p id="usernamet">USERNAME</p><input type="text" id="username" name="username"> 
-                    <p id="usernamet">PASSWORD</p><input type="password" id="password" name="password"> 
-                    <p id="usernamet">Description(Optional):</p> <input type="text" name="desc"> </br> <!-- This is new and needed -lex -->
-                	<input type="submit" value="Sign up"> <!-- This is the button, para ma send data to servlet -lex -->
+                <form> 
+                    <p id="usernamet">USERNAME</p><input type="text" id="username"> 
+                    <p id="usernamet">PASSWORD</p><input type="password" id="password"> 
+                    <p id="desct">DESCRIPTION (OPTIONAL)</p><input type="text" id="description"> 
+                    
+                    <i class="material-icons" id="check">check</i>
                 </form>
                 
-                </div>
+            </div>
             
             <a class="waves-effect waves-light btn" id="loginb" onclick="showLogin()">Login</a> <br>
             <a class="waves-effect waves-light btn" id="signupb" onclick="showSignUp()">Sign up</a>
         
-            <p id="cite"> Â© 2017 IDK</p>
+            <p id="cite"> © 2017 IDK</p>
 
         </div>
         
         <div id = "hfeed">
-            <img class="materialboxed" src="img/000018.JPG" width="280px" id="pic1">         
-            <img class="materialboxed" src="img/00660003.jpg" width="280px" id="pic2"> 
-            <img class="materialboxed" src="/img/Screen%20Shot%202017-07-26%20at%2011.05.12%20PM.png" width="280px" id="pic3">
+           <a data-fancybox="gallery" href="#wrapper"><img src="img/public/1.jpg" id="pic1"></a> <a data-fancybox="gallery" href="#wrapper"><img src="img/public/2.jpg" id="pic1"></a> <a data-fancybox="gallery" href="#wrapper"><img src="img/public/3.jpg" id="pic1"></a>  <a data-fancybox="gallery" href="#wrapper"><img src="img/public/4.jpg" id="pic1"></a>  <a data-fancybox="gallery" href="#wrapper"><img src="img/public/5.jpg" id="pic1"></a>  
+        </div>
+
+        <div id="wrapper">
+            <img src="img/public/1.jpg" id="pic4" width="450px"> <br>
+            <li class="divider"></li>  
+            <p id="caption"><span id="unc">admin</span> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Help moi ang hirap ng MP jusko my pamilee are the most important persons in my layp.</p>
+            <li class="divider"></li>  
         </div>
     
-
+    
     </body>
 </html>
