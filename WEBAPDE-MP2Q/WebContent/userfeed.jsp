@@ -33,15 +33,17 @@
 
               <!-- menu contents -->
               <ul id="menu" class='dropdown-content'>
-                <li><a href="#!"></a></li>
-                <li><a href="#!">home</a></li>
-                  <li><a href="#!">profile</a></li>
-                  <li><a href="#!">logout</a></li>
-                <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                  <li><a href="userfeed.jsp">home</a></li>
+                  <li><a href="profile.html">profile</a></li>
+                  <li><a href="logout">logout</a></li> <!-- Redirects to logout servlet. -->
               </ul>
         
     
         </div>
+        
+        <!-- This is a test, you can use this for showing attributes from the session. -->
+        <h1>THIS IS THE HOMEPAGE THINGY!!</h1> <br>
+			Username: ${sessionScope.un} <br>
       
         <div id="feed">
             <div id="picwrapper">

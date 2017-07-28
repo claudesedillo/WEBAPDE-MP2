@@ -28,7 +28,7 @@
 <body>
 	   < <div id="welcome"><p id="welcometag"><strong> Welcome,</strong> admin!</p><br>
             
-       <a class="waves-effect waves-light btn" id="proceedb">Proceed</a> 
+       <a class="waves-effect waves-light btn" id="proceedb" href="userfeed.jsp">Proceed</a> 
   
        </div>
 </body>

@@ -15,8 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet Filter implementation class Authenticate
  */
-@WebFilter (urlPatterns={"/Access-Denied.html", "/homepage.jsp", "/mainfeed.jsp", "/profile.html", "/success.jsp"})
-//(urlPatterns= {"/success.jsp", "/mainfeed.jsp", "/alreadyLogged.jsp"})
+@WebFilter (urlPatterns={"/Access-Denied.html", "/homepage.jsp", "/userfeed.jsp", "/profile.html", "/success.jsp"})
 public class Authenticate implements Filter {
 	private HttpServletRequest req;
 	private HttpServletResponse res;
@@ -44,16 +43,6 @@ public class Authenticate implements Filter {
 		res = (HttpServletResponse) response;
 		proceed = false; //Fixed infinite redirection
 		String url = req.getServletPath();
-		
-//		System.out.println("I am called");
-//		System.out.println(req.getSession().getAttribute("un"));
-//
-//		if((url.equals("/success.jsp") || url.equals("/mainfeed.jsp") || url.equals("/alreadyLogged.jsp"))) 
-//			if( req.getSession().getAttribute("un") != null)
-//				chain.doFilter(request, response);
-//			else
-//				//res.sendRedirect("Access-Denied.html");
-//				req.getRequestDispatcher("Access-Denied.html").forward(request, response);
 		
 		//Check if the cookie "USER" exists.
 		Cookie[] cookieList = req.getCookies();
@@ -95,7 +84,7 @@ public class Authenticate implements Filter {
 					
 				 break;
 			case "/success.jsp":
-			case "/mainfeed.jsp":
+			case "/userfeed.jsp":
 				if(proceed) { //forward to the its page. 
 					System.out.println("proceed to its page.");
 					chain.doFilter(request, response);
