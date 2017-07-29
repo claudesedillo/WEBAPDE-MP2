@@ -44,34 +44,38 @@
         </script>
         
 
-        <div class = "rightpane">
+       <div class = "rightpane">
             <i class="material-icons" id="magglass">search</i>
             <form><input type="text" id="searchbox"></form>
                 
             
             <p id="title">NYEAAAM</p>
                 
-            <div id = "logindiv">
-                <form><p id="usernamet">USERNAME</p><input type="text" id="username"> <br> <p id="passwordt">PASSWORD</p><input type="password" id="password"></form>
-                
-                <p id="rmwrapper">
-                    <input type="checkbox" id="rmcb" checked="checked" />
-                    <label for="rmcb">remember me</label>
-                </p>
-                
-                <i class="material-icons" id="check">check</i>
+             <div id = "logindiv">
+                <form action="login" method="POST">
+                    <p id="usernamet">USERNAME</p>
+	                <input type="text" id="username" name="username"> <br> 
+	                
+	                <p id="passwordt">PASSWORD</p>
+	                <input type="password" id="password" name="password"><br>
+	                
+	                <!-- Add remember tag on this spot for cookies -->	   
+	                 <input type="checkbox" name="remember" class="filled-in" id="filled-in-box" checked="checked" />
+      <label for="filled-in-box">Remember moi</label>             
+	                <input type="submit" value="login"> <!-- This is the button, para ma send data to servlet -lex -->
+                </form>
             </div>
                 
-            <div id="signupdiv">
-                <form> 
-                    <p id="usernamet">USERNAME</p><input type="text" id="username"> 
-                    <p id="usernamet">PASSWORD</p><input type="password" id="password"> 
-                    <p id="desct">DESCRIPTION (OPTIONAL)</p><input type="text" id="description"> 
-                    
-                    <i class="material-icons" id="check">check</i>
+               <div id="signupdiv">
+                <form method="POST" action="register"> 
+                	<!-- If any tags will share the same id, just use a class. ID's are supposed to be unique and it may cause some problems in the future -lex -->
+                    <p id="usernamet">USERNAME</p><input type="text" id="username" name="username"> 
+                    <p id="usernamet">PASSWORD</p><input type="password" id="password" name="password"> 
+                    <p id="usernamet">DESCRIPTION(OPTIONAL):</p> <input type="text" id="description" name="desc"> <br> <!-- This is new and needed -lex -->
+                	<input type="submit" value="Sign up"> <!-- This is the button, para ma send data to servlet -lex -->
                 </form>
                 
-            </div>
+                </div>
             
             <a class="waves-effect waves-light btn" id="loginb" onclick="showLogin()">Login</a> <br>
             <a class="waves-effect waves-light btn" id="signupb" onclick="showSignUp()">Sign up</a>
