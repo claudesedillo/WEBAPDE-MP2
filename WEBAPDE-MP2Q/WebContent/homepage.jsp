@@ -23,12 +23,12 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>   
       
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>      
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script> 
     </head>
     
     <body>
-      <script> 
+       <script> 
              function showLogin () {
                $("#logindiv").slideToggle();
                $("#signupdiv").slideUp();
@@ -44,7 +44,7 @@
         </script>
         
 
-       <div class = "rightpane">
+        <div class = "rightpane">
             <i class="material-icons" id="magglass">search</i>
             <form><input type="text" id="searchbox"></form>
                 
@@ -85,16 +85,47 @@
         </div>
         
         <div id = "hfeed">
-           <a data-fancybox="gallery" href="#wrapper"><img src="img/public/1.jpg" id="pic1"></a> <a data-fancybox="gallery" href="#wrapper"><img src="img/public/2.jpg" id="pic1"></a> <a data-fancybox="gallery" href="#wrapper"><img src="img/public/3.jpg" id="pic1"></a>  <a data-fancybox="gallery" href="#wrapper"><img src="img/public/4.jpg" id="pic1"></a>  <a data-fancybox="gallery" href="#wrapper"><img src="img/public/5.jpg" id="pic1"></a>  
-        </div>
+            <a data-fancybox="gallery" href="img/public/10.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/1.jpg" class="pics"></a>
+            <a data-fancybox="gallery" href="img/public/2.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/2.jpg" class="pics"></a>
+            <a data-fancybox="gallery" href="img/public/3.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/3.jpg" class="pics"></a>
+            <a data-fancybox="gallery" href="img/public/4.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/4.jpg" class="pics"></a>
+            <a data-fancybox="gallery" href="img/public/5.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/5.jpg" class="pics"></a>
+            <a data-fancybox="gallery" href="img/public/6.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/6.jpg" class="pics"></a>
+             <a data-fancybox="gallery" href="img/public/7.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/7.jpg" class="pics"></a>
+            <a data-fancybox="gallery" href="img/public/8.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/8.jpg" class="pics"></a>
+            <a data-fancybox="gallery" href="img/public/9.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/9.jpg" class="pics"></a>
+            <a data-fancybox="gallery" href="img/public/10.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/10.jpg" class="pics"></a>
+            <a data-fancybox="gallery" href="img/public/11.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/11.jpg" class="pics"></a>
+          
+            <a href="#" id="showb">show more</a>
+    
+   </div>
 
         <div id="wrapper">
             <img src="img/public/1.jpg" id="pic4" width="450px"> <br>
             <li class="divider"></li>  
-            <p id="caption"><span id="unc">admin</span> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Help moi ang hirap ng MP jusko my pamilee are the most important persons in my layp.</p>
+            <p id="caption"><span id="unc">admin</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Help moi ang hirap ng MP jusko my pamilee are the most important persons in my layp.</p>
             <li class="divider"></li>  
         </div>
-    
-    
+        
+        <script>
+            $(function () {
+                $(".pics").slice(0, 3).show();
+                 $("#showb").on('click', function (e) {
+                    e.preventDefault();
+                    $(".pics:hidden").slice(0, 3).fadeIn(900);
+                    if ($(".pics:hidden").length == 0) {
+                        $("#showb").fadeOut("fast");
+                    }
+                     
+                    $('html,body').animate({
+                        scrollTop: $(this).offset().top
+                    }, 1500);   
+                });
+               
+            });
+            
+        </script>
+
     </body>
 </html>
