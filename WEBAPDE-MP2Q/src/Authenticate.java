@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet Filter implementation class Authenticate
  */
-@WebFilter (urlPatterns={"/Access-Denied.html", "/homepage.jsp", "/userfeed.jsp", "/profile.html", "/success.jsp"})
+@WebFilter (urlPatterns={"/Access-Denied.html", "/homepage.jsp", "/userfeed.jsp", "/profile.jsp", "/success.jsp"})
 public class Authenticate implements Filter {
 	private HttpServletRequest req;
 	private HttpServletResponse res;
@@ -85,6 +85,7 @@ public class Authenticate implements Filter {
 				 break;
 			case "/success.jsp":
 			case "/userfeed.jsp":
+			case "/profile.jsp":	
 				if(proceed) { //forward to the its page. 
 					System.out.println("proceed to its page.");
 					chain.doFilter(request, response);

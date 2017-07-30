@@ -32,7 +32,7 @@
               <!-- menu contents -->
               <ul id="menu" class='dropdown-content'>
                   <li><a href="userfeed.jsp">home</a></li>
-                  <li><a href="profile.html">profile</a></li>
+                  <li><a href="profile.jsp">profile</a></li>
                   <li><a href="logout">logout</a></li> <!-- Redirects to logout servlet. -->
               </ul>
         
