@@ -9,12 +9,10 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         <!--Import materialize.css-->
-        <link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
         <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="materialize/js/materialize.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
         
         <link rel = "stylesheet" type="text/css" href="css/homepage.css">
@@ -61,7 +59,7 @@
 	                
 	                <!-- Add remember tag on this spot for cookies -->	   
 	                 <input type="checkbox" name="remember" class="filled-in" id="filled-in-box" checked="checked" />
-      <label for="filled-in-box">Remember moi</label>             
+     				 <label for="filled-in-box">Remember moi</label> <br>            
 	                <input type="submit" value="login"> <!-- This is the button, para ma send data to servlet -lex -->
                 </form>
             </div>
