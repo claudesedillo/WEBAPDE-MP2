@@ -58,7 +58,7 @@
                 <a data-fancybox="gallery" href="img/private/1.jpg" data-caption="helpppp<br><strong>jesssss</strong>">
                 <img src="img/private/1.jpg" class="pics"></a>
                 
-                <a data-fancybox="gallery" href="img/private/2.jpg" data-caption="helpppp<br><strong>jesssss</strong>">
+                   <a data-fancybox="gallery" href="img/private/2.jpg" data-caption="helpppp<br><strong>jesssss</strong>">
                 <img src="img/private/2.jpg" class="pics"></a>
                 
                 <a data-fancybox="gallery" href="img/private/3.jpg" data-caption="helpppp<br><strong>jesssss</strong>">
@@ -91,6 +91,8 @@
                 <a data-fancybox="gallery" href="img/private/12.jpg" data-caption="helpppp<br><strong>jesssss</strong>">
                 <img src="img/private/12.jpg" class="pics"></a>
                 
+                
+             
                 <a href="#" id="showb">show more</a>
             
             </div>

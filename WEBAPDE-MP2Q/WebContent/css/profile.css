@@ -72,7 +72,7 @@ body {
 }
 
 #dp {
-    height: 80%;
+    width: 15%;
     margin-top: 2%;
     margin-left: 8%;
     display: inline-block;
@@ -82,7 +82,7 @@ body {
     display: inline-block;
     width: 65%;
     margin-left: 2%;
-    bottom: 50%;
+    margin-bottom: 2%;
 }
 
 #name {
@@ -118,7 +118,7 @@ body {
 }
 
 .pics {
-    height: 38%;
+    width: 32%;
     margin: 5px;
     position: relative;
     margin-bottom: 0px;
