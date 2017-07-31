@@ -100,13 +100,6 @@
     
    </div>
 
-        <div id="wrapper">
-            <img src="img/public/1.jpg" id="pic4" width="450px"> <br>
-            <li class="divider"></li>  
-            <p id="caption"><span id="unc">admin</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Help moi ang hirap ng MP jusko my pamilee are the most important persons in my layp.</p>
-            <li class="divider"></li>  
-        </div>
-        
         <script>
 	        $(function () {
 	            $(".pics").slice(0, 6).show();

@@ -31,16 +31,17 @@
 
               <!-- menu contents -->
               <ul id="menu" class='dropdown-content'>
+              	  <li><a href="logout">logout</a></li>
                   <li><a href="userfeed.jsp">home</a></li>
                   <li><a href="profile.jsp">profile</a></li>
-                  <li><a href="logout">logout</a></li> <!-- Redirects to logout servlet. -->
+                   <!-- Redirects to logout servlet. -->
               </ul>
         </div>
         
         <!-- This is a test, you can use this for showing attributes from the session. -->
 			Username: ${sessionScope.un} <br>
       
-    <div id="tagdiv">
+    	<div id="tagdiv">
             <p> Add tags:</p>    
             <form method="POST">
              <div id="formdiv">
