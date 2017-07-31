@@ -30,7 +30,7 @@ public class PhotoService {
 		photo1.setTitle("photo 1");
 		photo1.setDescription("first photo");
 		photo1.setUploader("User 1");
-		photo1.setUrl("img\\public\\000018.JPG");
+		photo1.setUrl("img\\public\\1.JPG");
 		photo1.setTags("Outdoor");
 		photo1.setTags("Nature");
 		photo1.setPrivacy("public");
@@ -38,7 +38,7 @@ public class PhotoService {
 		photo2.setTitle("photo 2");
 		photo2.setDescription("second photo");
 		photo2.setUploader("User 2");
-		photo2.setUrl("img\\public\\000019.JPG");
+		photo2.setUrl("img\\public\\2.JPG");
 		photo2.setTags("Outdoor");
 		photo2.setTags("Philosophy");
 		photo2.setPrivacy("public");
@@ -46,7 +46,7 @@ public class PhotoService {
 		photo3.setTitle("photo 3");
 		photo3.setDescription("third photo");
 		photo3.setUploader("User 3");
-		photo3.setUrl("img\\public\\000023.JPG");
+		photo3.setUrl("img\\public\\3.JPG");
 		photo3.setTags("Indoor");
 		photo3.setTags("Food");
 		photo3.setPrivacy("public");
@@ -54,14 +54,14 @@ public class PhotoService {
 		photo4.setTitle("photo 4");
 		photo4.setDescription("fourth photo");
 		photo4.setUploader("User 4");
-		photo4.setUrl("webContent\\img\\00660003.jpg");
+		photo4.setUrl("webContent\\img\\4.jpg");
 		photo4.setTags("Family");
 		photo4.setPrivacy("public");
 		
 		photo5.setTitle("photo 5");
 		photo5.setDescription("fifth photo");
 		photo5.setUploader("User 1");
-		photo5.setUrl("webContent\\img\\DP.png");
+		photo5.setUrl("webContent\\img\\5.png");
 		photo5.setTags("Work");
 		photo5.setTags("Food");
 		photo5.setPrivacy("private");
@@ -69,7 +69,7 @@ public class PhotoService {
 		photo6.setTitle("photo 6");
 		photo6.setDescription("sixth photo");
 		photo6.setUploader("User 2");
-		photo6.setUrl("webContent\\img\\Screen Shot 2017-07-23 at 2.32.32 PM.png");
+		photo6.setUrl("webContent\\img\\6.png");
 		photo6.setTags("Music");
 		photo6.setTags("Fun");
 		photo6.setPrivacy("private");
@@ -77,7 +77,7 @@ public class PhotoService {
 		photo7.setTitle("photo 7");
 		photo7.setDescription("seventh photo");
 		photo7.setUploader("User 3");
-		photo7.setUrl("webContent\\img\\Screen Shot 2017-07-26 at 11.04.59 PM.png");
+		photo7.setUrl("webContent\\img\\7.png");
 		photo7.setTags("Outdoor");
 		photo7.setTags("Vacation");
 		photo7.setPrivacy("private");
@@ -85,7 +85,7 @@ public class PhotoService {
 		photo8.setTitle("photo 8");
 		photo8.setDescription("eighth photo");
 		photo8.setUploader("User 4");
-		photo8.setUrl("webContent\\img\\Screen Shot 2017-07-23 at 11.05.12 PM.png");
+		photo8.setUrl("webContent\\img\\8.png");
 		photo8.setTags("Work");
 		photo8.setTags("Food");
 		photo8.setPrivacy("private");

@@ -8,6 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> OHAIYO GOSAIMAS</h1>
+	<c:forEach items="${Photo}" var = "p">
+		<img src= p.url>
+		Title: ${p.title}
+		Description: ${p.description}
+	</c:forEach>
 </body>
 </html>
