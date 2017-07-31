@@ -95,6 +95,7 @@
             <a data-fancybox="gallery" href="img/public/10.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/10.jpg" class="pics"></a>
             <a data-fancybox="gallery" href="img/public/11.jpg" data-caption="helpppp<br><strong>jesssss</strong>"><img src="img/public/11.jpg" class="pics"></a>
           
+          	<br>
             <a href="#" id="showb">show more</a>
     
    </div>

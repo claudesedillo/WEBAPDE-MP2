@@ -35,8 +35,6 @@
                   <li><a href="profile.jsp">profile</a></li>
                   <li><a href="logout">logout</a></li> <!-- Redirects to logout servlet. -->
               </ul>
-        
-    
         </div>
         
         <!-- This is a test, you can use this for showing attributes from the session. -->
@@ -54,45 +52,43 @@
       
         <div id="feed">
             <div class="picwrapper">
-                <img src="img/public/1.jpg" width="90%" class="pics">
+                <img src="img/public/1.jpg" class="pics">
                 <p class="un"> alexagnoii</p><i class="material-icons" onclick="showTagDiv()" id="addtag">loupe</i><br><p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
             </div>
             
-            
-            
             <div class="picwrapper">
-                <img src="img/private/1.jpg" width="100%" class="pics">
+                <img src="img/private/1.jpg" width="40%" class="pics">
                 <p class="un"> jessganoww</p><i class="material-icons" id="addtag">loupe</i><br><p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
             </div>
             
             <div class="picwrapper">
-                <img src="img/public/2.jpg" width="100%" class="pics">
+                <img src="img/public/2.jpg" width="40%" class="pics">
                 <p class="un"> sedillocalaude_</p><i class="material-icons" id="addtag">loupe</i><br><p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
             </div>
             
             <div class="picwrapper">
-                <img src="img/private/2.jpg" width="100%" class="pics">
+                <img src="img/private/2.jpg" width="40%" class="pics">
                 <p class="un">jessganoww</p><i class="material-icons" id="addtag">loupe</i><br><p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
             </div>
             
             <div class="picwrapper">
-                <img src="img/public/3.jpg" width="100%" class="pics">
+                <img src="img/public/3.jpg" width="40%" class="pics">
                 <p class="un">gabsantiago</p><i class="material-icons" id="addtag">loupe</i><br><p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
             </div>
             
             <div class="picwrapper">
-                <img src="img/private/3.jpg" width="100%" class="pics">
+                <img src="img/private/3.jpg" width="40%" class="pics">
                 <p class="un">alexagnoii</p><i class="material-icons" id="addtag">loupe</i><br><p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
             </div>
             
             <div class="picwrapper">
-                <img src="img/public/4.jpg" width="100%" class="pics">
+                <img src="img/public/4.jpg" width="40%" class="pics">
                 <p class="un">sedilloclaude_</p><i class="material-icons" id="addtag">loupe</i><br><p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
             </div>
             
             <div class="picwrapper">
-                <img src="img/private/3.jpg" width="100%" class="pics">
-                <p class="un">jessganoww</p><i class="material-icons" id="addtag">loupe</i><br><i class="material-icons" id="addtag">loupe</i><br><p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
+                <img src="img/private/3.jpg" width="40%" class="pics">
+                <p class="un">jessganoww</p><i class="material-icons" id="addtag">loupe</i><br><p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
             </div>
             
             <a href="#" id="showb">show more</a>

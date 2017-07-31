@@ -206,18 +206,20 @@
 
 #showb {
     font-family: "Open Sans Condensed";
-    font-size: 13px;
-    padding: 5px;
- 	padding-left: 30%;
- 	padding-right: 30%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.85);
-    color: snow;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.6);
     border-style: solid;
     border-color: snow;
     border-radius: 5px;
-    border-width: 1.5px;
-    transition: all 500ms ease-in-out;
+    border-width: 1px;
+    color: snow;
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    padding: 5px;
+	justify-content: center;
+	transition: all 500ms ease-in-out;
+
 }
 
 #showb:hover {

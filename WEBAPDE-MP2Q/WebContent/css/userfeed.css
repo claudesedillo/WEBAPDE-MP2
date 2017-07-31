@@ -40,26 +40,30 @@ body {
 
 .picwrapper{
     width: 40%;
-    height: 100%;
+    height: 80%;
     margin: 0 auto;
     background-color: snow;
-    margin-bottom: 15px;
-    opacity: 0.9;
-    padding: 20px;
-    text-align: center;
-    display: none;
+    padding: 0px;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+    align-content: center;
 }
 
 .pics {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 1%;
     border-style: solid;
     border-color: rgba (0, 0, 0, 0.7);
     border-radius: 5px;
     border-style: solid;
     border-width: 2px;
-    padding: 0px;
+    display: block;
+    
+    
 }
 
-.un {
+.picwrapper .un {
     font-family: "Raleway";
     text-align: left;
     font-size: 14px;
@@ -67,6 +71,7 @@ body {
     font-weight: 600;
     margin-bottom: 0px;
     margin-top: 5px;
+    padding-left: 5%;
     display: inline;
     float: left;
 }
@@ -75,17 +80,17 @@ body {
     font-family: "Raleway";
     text-align: left;
     float: left;
-    margin-left: 5px;
-    font-size: 12px;
+    font-size: 80%;
     width: 95%;
     font-weight: 400;
     margin-top: 0px;
-    margin-bottom: 0;    
+    padding-left: 7%;
+    padding-bottom: 5%; 
 }
 
 #addtag {
     float: right;
-    margin-top: 2px;
+    padding-right: 5%;
 }
 
 #header #dropmenu {
@@ -108,18 +113,20 @@ body {
 
 #showb {
     font-family: "Open Sans Condensed";
-    font-size: 13px;
-    display: block;
-    padding: 5px;
-    margin-top: 5px;
-    text-align: center;
+    font-size: 12px;
     background: rgba(0, 0, 0, 0.6);
-    color: snow;
     border-style: solid;
     border-color: snow;
     border-radius: 5px;
     border-width: 1px;
-    transition: all 500ms ease-in-out;
+    color: snow;
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+    padding: 5px;
+	justify-content: center;
+	transition: all 500ms ease-in-out;
+
 }
 
 #showb:hover {
@@ -142,6 +149,7 @@ body {
     background-color: white;
     text-align: center;
     overflow: scroll;
+    display: none;
 
 }
 
@@ -162,6 +170,7 @@ body {
     display: inline-block;
     margin-top: 0px;
     transform: translate(5%, 7px);
+    
 }
 
  
