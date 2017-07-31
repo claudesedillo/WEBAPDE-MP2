@@ -38,7 +38,7 @@
           </ul>
             
             <i class="material-icons" id="magglass">search</i>
-            <form method="get" action="photoSearch"><input type="search" id="searchbox" name="search"></form>
+            <form method="get" action="photoSearch"><input type="search" id="searchbox" name="search"> <input type="submit"></form>
             
         </div>
             

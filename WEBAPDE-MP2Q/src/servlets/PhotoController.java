@@ -13,7 +13,7 @@ import service.PhotoService;
 /**
  * Servlet implementation class PhotoController
  */
-@WebServlet(urlPatterns= {"/PhotoController", "/photoTags"})
+@WebServlet(urlPatterns= {"/upload", "/photoSearch"})
 public class PhotoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,7 +31,12 @@ public class PhotoController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		doPost(request, response);
+		String urlpattern = request.getServletPath();
+		System.out.println("PHOTOSERVLET:  " + urlpattern);
+		switch(urlpattern) {
+			case "/photoSearch": filterByTag(request, response);
+				                 break;
+		}
 	}
 
 	/**
@@ -41,10 +46,10 @@ public class PhotoController extends HttpServlet {
 		// TODO Auto-generated method stub
 		String urlpattern = request.getServletPath();
 		
+		System.out.println("PHOTOSERVLET (POST): " + urlpattern);
 		switch(urlpattern) {
-		case"/PhotoController": addPhoto(request, response);
+		case"/upload": addPhoto(request, response);
 								break;
-		case"/photoTags": filterByTag(request, response);
 		}
 	}
 	
@@ -52,7 +57,7 @@ public class PhotoController extends HttpServlet {
 		PhotoService ps = new PhotoService();
 		request.setAttribute("Photo", ps.filterByTag(request.getParameter("tag")));
 		
-		request.getRequestDispatcher("dummy.jsp").forward(request,  response);
+		request.getRequestDispatcher("searchResult.jsp").forward(request,  response);
 		System.out.println(request.getParameter("tag"));
 	}
 	
@@ -60,6 +65,9 @@ public class PhotoController extends HttpServlet {
 		PhotoService ps = new PhotoService();
 		request.setAttribute("Photo", ps.getPhotos());
 		
-		request.getRequestDispatcher("dummy.jsp").forward(request, response);
+		System.out.println(request.getParameter("pic"));
+		System.out.println("I added photos.");
+
+		response.sendRedirect("profile.jsp");
 	}
 }

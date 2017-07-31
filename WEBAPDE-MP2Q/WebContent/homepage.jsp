@@ -44,7 +44,7 @@
 
         <div class = "rightpane">
             <i class="material-icons" id="magglass">search</i>
-            <form><input type="text" id="searchbox"></form>
+            <form method="get" action="photoSearch"><input type="search" id="searchbox" name="search"> <input type="submit"></form>
                 
             
             <p id="title">NYEAAAM</p>
