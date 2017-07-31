@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class Photo {
 
+	private int id;
 	private String title;
 	private String url;
 	private String uploader;
 	private ArrayList<String> tags = new ArrayList<String>();
 	private String privacy;
 	private String description;
-	
+
 	public String getUrl() {
 		return url;
 	}

@@ -5,71 +5,10 @@ import java.util.ArrayList;
 import bean.Photo;
 
 public class PhotoService {
-
-	public static void sortByUploader(ArrayList<Photo> photoList, String username) {
-		System.out.println("============================================================");
-		System.out.println("Filter by uploader");
-		for(Photo p: photoList) {
-
-			if(p.getUploader().equals(username)) {
-				System.out.println(p.getTitle());
-				System.out.println("Uploaded by: " + p.getUploader());
-				System.out.println(p.getDescription());
-				System.out.println("Privacy setting: " + p.getPrivacy());
-				System.out.println("Tags");
-				for(String tag: p.getTags()) {
-					System.out.println(tag);
-				}
-			}
-			System.out.println();
-		}
-		System.out.println("============================================================");
-	}
 	
-	public static void sortPublic(ArrayList<Photo> photoList) {
-		System.out.println("============================================================");
-		System.out.println("Sort Public");
-		for(Photo p: photoList) {
-			if(p.getPrivacy().equals("public")) {
-				System.out.println(p.getTitle());
-				System.out.println("Uploaded by: " + p.getUploader());
-				System.out.println(p.getDescription());
-				System.out.println("Privacy setting: " + p.getPrivacy());
-				System.out.println("Tags");
-				for(String tag: p.getTags()) {
-					System.out.println(tag);
-				}
-			}
-			System.out.println();
-		}
-		System.out.println("============================================================");
-	}
+	ArrayList<Photo> photos = new ArrayList<Photo>();
 	
-	public static boolean checkTag(Photo p, String tag) {
-		for(String tags: p.getTags()) {
-			if(tags.equals(tag)) {
-				return true;
-			}
-		}
-		return false;
-	}
-	public static void filterByTag(ArrayList<Photo> photoList, String tag) {
-		for(Photo p: photoList) {
-			//check if tag exists in the photo
-			if(checkTag(p, tag) == true) {
-				System.out.println(p.getTitle());
-				System.out.println("Uploaded by: " + p.getUploader());
-				System.out.println(p.getDescription());
-				System.out.println("Privacy setting: " + p.getPrivacy());
-				System.out.println("Tags");
-				for(String tags: p.getTags()) {
-					System.out.println(tags);
-				}
-			}
-		}
-	}
-	
-	public static void main(String[] args) {
+	public PhotoService() {
 		Photo photo1 = new Photo();
 		Photo photo2 = new Photo();
 		Photo photo3 = new Photo();
@@ -77,8 +16,7 @@ public class PhotoService {
 		Photo photo5 = new Photo();
 		Photo photo6 = new Photo();
 		Photo photo7 = new Photo();
-		Photo photo8 = new Photo();
-		ArrayList<Photo> photos = new ArrayList<Photo>();
+		Photo photo8 = new Photo();		
 		
 		photos.add(photo1);
 		photos.add(photo2);
@@ -92,7 +30,7 @@ public class PhotoService {
 		photo1.setTitle("photo 1");
 		photo1.setDescription("first photo");
 		photo1.setUploader("User 1");
-		photo1.setUrl("webContent\\img\\000018.JPG");
+		photo1.setUrl("img\\public\\000018.JPG");
 		photo1.setTags("Outdoor");
 		photo1.setTags("Nature");
 		photo1.setPrivacy("public");
@@ -100,7 +38,7 @@ public class PhotoService {
 		photo2.setTitle("photo 2");
 		photo2.setDescription("second photo");
 		photo2.setUploader("User 2");
-		photo2.setUrl("webContent\\img\\000019.JPG");
+		photo2.setUrl("img\\public\\000019.JPG");
 		photo2.setTags("Outdoor");
 		photo2.setTags("Philosophy");
 		photo2.setPrivacy("public");
@@ -108,7 +46,7 @@ public class PhotoService {
 		photo3.setTitle("photo 3");
 		photo3.setDescription("third photo");
 		photo3.setUploader("User 3");
-		photo3.setUrl("webContent\\img\\000023.JPG");
+		photo3.setUrl("img\\public\\000023.JPG");
 		photo3.setTags("Indoor");
 		photo3.setTags("Food");
 		photo3.setPrivacy("public");
@@ -151,9 +89,70 @@ public class PhotoService {
 		photo8.setTags("Work");
 		photo8.setTags("Food");
 		photo8.setPrivacy("private");
-		
-		sortPublic(photos);
-		sortByUploader(photos, "User 1");
-		filterByTag(photos, "outdoor");
+	}
+	public ArrayList<Photo> getPhotos() {
+		return photos;
+	}
+	public void setPhotos(ArrayList<Photo> photos) {
+		this.photos = photos;
+	}
+	public static void sortByUploader(ArrayList<Photo> photoList, String username) {
+		System.out.println("============================================================");
+		System.out.println("Filter by uploader");
+		for(Photo p: photoList) {
+
+			if(p.getUploader().equals(username)) {
+				System.out.println(p.getTitle());
+				System.out.println("Uploaded by: " + p.getUploader());
+				System.out.println(p.getDescription());
+				System.out.println("Privacy setting: " + p.getPrivacy());
+				System.out.println("Tags");
+				for(String tag: p.getTags()) {
+					System.out.println(tag);
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("============================================================");
+	}
+	
+	public static void sortPublic(ArrayList<Photo> photoList) {
+		System.out.println("============================================================");
+		System.out.println("Sort Public");
+		for(Photo p: photoList) {
+			if(p.getPrivacy().equals("public")) {
+				System.out.println(p.getTitle());
+				System.out.println("Uploaded by: " + p.getUploader());
+				System.out.println(p.getDescription());
+				System.out.println("Privacy setting: " + p.getPrivacy());
+				System.out.println("Tags");
+				for(String tag: p.getTags()) {
+					System.out.println(tag);
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("============================================================");
+	}
+	
+	public ArrayList<Photo> filterByTag(String tag) {
+		ArrayList<Photo> returnList = new ArrayList<Photo>();
+		for(Photo p: photos) {
+			for(String s: p.getTags()) {
+				if(s.equals(tag)) {
+					returnList.add(p);
+					System.out.println("Found photo with tag " + tag + ". Uploaded by " + p.getUploader());
+				}
+			}
+		}
+		if (returnList.size() != 0)
+			return returnList;
+		else
+			return null;
+	}
+	
+	public static void main(String[] args) {
+		PhotoService ps = new PhotoService();
+		ps.filterByTag("Nature");
 	}
 }
