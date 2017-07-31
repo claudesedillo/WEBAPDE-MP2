@@ -26,6 +26,16 @@
       
 </head>
 <body>
+		<div id="tagdiv">
+            <p> Add tags:</p>    
+            <form method="POST">
+             <div id="formdiv">
+                  <input type="text" name="myInputs[]" id="tags">
+             </div> <i class="material-icons" id="aticon" onClick="addInput('formdiv');">add_circle_outline</i>
+        </form>
+        
+        </div>
+
  	  <div id="header">
               <a class="dropdown-button btn" href='#' data-activates="menu" id="dropmenu"> <i class="material-icons" id="icon">menu</i></a>
 
@@ -36,21 +46,15 @@
                   <li><a href="profile.jsp">profile</a></li>
                    <!-- Redirects to logout servlet. -->
               </ul>
+              
+              
+            <i class="material-icons" id="magglass">search</i>
+            <form><input type="text" id="searchbox"></form>
         </div>
         
         <!-- This is a test, you can use this for showing attributes from the session. -->
 			Username: ${sessionScope.un} <br>
-      
-    	<div id="tagdiv">
-            <p> Add tags:</p>    
-            <form method="POST">
-             <div id="formdiv">
-                  <input type="text" name="myInputs[]" id="tags">
-             </div> <i class="material-icons" id="aticon" onClick="addInput('formdiv');">add_circle_outline</i>
-        </form>
-        
-        </div>
-      
+           
         <div id="feed">
             <div class="picwrapper">
                 <img src="img/public/1.jpg" class="pics">
@@ -108,7 +112,7 @@
                         $("#showb").fadeOut("fast");
                     } 
                 });
-
+              
             });
              
              var ctr = 1;
@@ -125,7 +129,6 @@
                  $("#tagdiv").fadeIn();
              }
     
-            
         </script>
 </body>
 </html>
