@@ -236,3 +236,17 @@
     font-size: 10px;
     color: snow;
 }
+
+.checkbox-black.filled-in[type="checkbox"] + label:after{
+  border: 2px solid snow;
+  background: transparent;
+}
+.checkbox-black.filled-in[type="checkbox"]:checked + label:after{
+  background: black;
+}
+.checkbox-black.filled-in[type="checkbox"]:checked + label:before{
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}

@@ -58,8 +58,8 @@
 	                <input type="password" id="password" name="password"><br>
 	                
 	                <!-- Add remember tag on this spot for cookies -->	   
-	                 <input type="checkbox" name="remember" class="filled-in" id="filled-in-box" checked="checked" />
-     				 <label for="filled-in-box">Remember moi</label> <br>            
+	                 <input type="checkbox" name="remember" class="filled-in checkbox-black" id="filled-in-box" checked="checked" />
+     				 <label for="filled-in-box">Remember me</label> <br>            
 	                <input type="submit" value="login"> <!-- This is the button, para ma send data to servlet -lex -->
                 </form>
             </div>
