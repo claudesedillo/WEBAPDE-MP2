@@ -69,7 +69,12 @@
                 	<!-- If any tags will share the same id, just use a class. ID's are supposed to be unique and it may cause some problems in the future -lex -->
                     <p id="usernamet">USERNAME</p><input type="text" id="username" name="username"> 
                     <p id="usernamet">PASSWORD</p><input type="password" id="password" name="password"> 
-                    <p id="usernamet">DESCRIPTION(OPTIONAL):</p> <input type="text" id="description" name="desc"> <br> <!-- This is new and needed -lex -->
+                    <p id="usernamet">DESCRIPTION(OPTIONAL):</p> 
+                    
+                    <!-- <input type="text" id="description" name="desc"> --> 
+                    <textarea id="description" name="desc"></textarea>
+                    <br> <span id="maxCount">Character:</span> <span id="keyCount">120</span><br><!-- This is new and needed -lex -->
+                	
                 	<input type="submit" value="Sign up"> <!-- This is the button, para ma send data to servlet -lex -->
                 </form>
                 
@@ -100,7 +105,11 @@
     
    </div>
 
-        <script>
+              <script>
+        
+        $("document").ready(function() {
+        	
+        
 	        $(function () {
 	            $(".pics").slice(0, 6).show();
 	             $("#showb").on('click', function (e) {
@@ -118,7 +127,45 @@
 	            });
 	           
 	        });
-        </script>
+	        
+	        
+	        $("textarea#description").keypress(function(e) {
+	        	//count = $("textarea#description").val().length;
+	        	count = $("span#keyCount").html();
+	        	console.log("keypress" + count);
+	        	
+
+	        	if(count > 0) {
+	        		count--;
+	        		$("span#keyCount").html(count);
+	        	}
+	        	
+	        	else e.preventDefault();
+	      	
+	        });
+	        
+	        $("textarea#description").keyup(function(e) {
+	        	if(e.keyCode == 8 || e.keyCode == 46) {
+	        		var descLength = $("textarea#description").val().length;
+	        			count = $("span#keyCount").html();
+	        			console.log("keyup" + count);
+	        			
+	        			if(descLength == 0) {
+	        				count = 120;
+	        				$("span#keyCount").html(count);
+	        			}
+	        			
+	        			else
+	        				if(count != 120) {
+	        					count++;
+	        					$("span#keyCount").html(count);
+	        				}
+	        	}
+	        	
+	        })
+        });
+	     </script>
+
 
     </body>
 </html>

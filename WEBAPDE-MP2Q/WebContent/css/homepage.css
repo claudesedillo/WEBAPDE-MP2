@@ -230,3 +230,9 @@
     border-radius: 5px;
     border-width: 1.5px;
 }
+
+#maxCount, #keyCount{
+	font-family: "Raleway";
+    font-size: 10px;
+    color: snow;
+}
