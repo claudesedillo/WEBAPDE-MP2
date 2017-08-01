@@ -49,7 +49,7 @@
               
               
             <i class="material-icons" id="magglass">search</i>
-            <form method="get" action="photoSearch"><input type="search" id="searchbox" name="search"></form>
+            <form><input type="text" id="searchbox"></form>
         </div>
         
         <!-- This is a test, you can use this for showing attributes from the session. -->

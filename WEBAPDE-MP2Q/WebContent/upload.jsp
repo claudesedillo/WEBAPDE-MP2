@@ -15,10 +15,9 @@
 <meta charset="ISO-8859-1">
 </head>
 <body>
- 	<form method="post" action="upload">
+ 	<form>
        <p>Select a file</p>
        <input type="file" name="pic" accept="image/*" onchange="readURL(this);">
-       <input type="submit">
     </form>
     <img id="image" src="default.gif" alt="your image" />
     <script>
